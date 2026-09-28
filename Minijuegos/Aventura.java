@@ -8,6 +8,8 @@ public class Aventura {
 		Scanner teclado = new Scanner(System.in);
 		// Vida del usuario //
 		int vida = 100;
+		int daño = 50;
+		int vendajes = 25;
 		
 		System.out.println("Comienza una nueva aventura en Java");
 		System.out.println("Vida actual: " + vida + " PV\n");
@@ -21,7 +23,31 @@ public class Aventura {
 		
 		// Toma de Decisiones //
 		
-		int opcion1 = teclado.nextInt();
-	}
-
+		int eleccion1 = teclado.nextInt();
+		if (eleccion1 == 1) {
+			System.out.println("Te encuentras con mounstros y te atacan, logras escapar pero sales herido");
+			vida -= daño;
+			System.out.println("Vida restante:" + vida );
+			System.out.println("Después de escapar, te encuentras con lo que parece un asentamiento");	
+			System.out.println("Podrían haber recursos, pero desconoces si esta inhabitado, qué haces?");
+			System.out.println("Opción 1: Saquear el asentamiento");
+			System.out.println("Opción 2: Ignorarlo y seguir adelante");
+		int eleccion2 = teclado.nextInt();
+		if (eleccion2 == 1) {
+			System.out.println("Consigues recursos sin encontrarte a nadie, obtienes comida y vendajes");
+			System.out.println("Te sientes mejor despúes de aplicar el vendaje");
+			System.out.println("Vida restante:" + (vida - 25));
+		}
+			
+		}	
+		
+		if (eleccion1== 2) {
+			System.out.println("Te encuentras con exploradores y continúas con ellos, al parecer la luz venía de una linterna...");
+			System.out.println("Despúes de acompañarlos, te separas y te dan vendajes");
+			
+			System.out.println("Caminando más adelante tienes la opción de subir una cuerda o seguir el camino de la cueva");
+		}		
+		
+		
+}
 }
